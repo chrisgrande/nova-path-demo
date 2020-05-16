@@ -1,0 +1,41 @@
+{
+  "identifier": "chiristophergrande.PathDemoExtension",
+  "name": "Path Demo Extension",
+  "vendor": "Chiristopher Grande",
+  "description": "Lorem ipsum, dolor sit amet.",
+  "version": "1.0",
+  "categories": [],
+
+  "main": "main.js",
+
+  "activationEvents": ["onLanguage:javascript"],
+
+  "entitlements": {
+    "filesystem": "readwrite",
+    "process": true
+  },
+
+  "commands": {
+    "editor": [
+      {
+        "title": "Foobar",
+        "command": "path-demo-extension.insertFoobar"
+      }
+    ]
+  },
+  "config-workspace": [
+    {
+      "key": "pathdemoextension.selected-path",
+      "title": "Select File",
+      "description": "Selected File will not be written to Configuration.json",
+      "type": "path"
+    },
+    {
+      "key": "pathdemoextension.bool",
+      "title": "But this Bool will work",
+      "description": "Will appear in project Configuration.json",
+      "type": "boolean",
+      "default": false
+    }
+  ]
+}
